@@ -1,34 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mock_zuscoffee/presentation/models/carousel_details_args.dart';
 
 class CarouselDetailsPage extends StatelessWidget {
-  const CarouselDetailsPage(
-      {super.key,
-      required this.imageColor,
-      required this.imageText,
-      required this.imageDescription});
+  static const routeName = '/carousel-details-page';
 
-  final Color imageColor;
-  final String imageText;
-  final String imageDescription;
+  const CarouselDetailsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final args =
+        ModalRoute.of(context)!.settings.arguments as CarouselDetailsArguments;
+
     return Scaffold(
-      body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              height: 200,
-              width: MediaQuery.of(context).size.width,
-              color: imageColor,
-            ),
-            const SizedBox(height: 20),
-            Text(imageText),
-            const SizedBox(height: 20),
-            Text(imageDescription),
-          ],
-        ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            height: MediaQuery.of(context).size.height * 0.3,
+            width: MediaQuery.of(context).size.width,
+            child: Image.asset(args.image, fit: BoxFit.cover),
+          ),
+          const SizedBox(height: 20),
+          Text(
+            args.title,
+            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 20),
+          Text(args.description),
+        ],
       ),
     );
   }

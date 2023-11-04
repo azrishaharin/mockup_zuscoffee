@@ -18,20 +18,20 @@ class BottomNav extends StatelessWidget {
       selectedItemColor: textColor,
       unselectedItemColor: Colors.grey,
       onTap: (index) => onTabChange!(index),
-      items: const [
+      items: [
         BottomNavigationBarItem(
-          icon: Icon(Icons.home),
+          icon: Image.asset("assets/images/zus_logo.png", width: 30),
           label: 'Home',
         ),
-        BottomNavigationBarItem(
+        const BottomNavigationBarItem(
           icon: Icon(Icons.coffee),
           label: 'Menu',
         ),
-        BottomNavigationBarItem(
+        const BottomNavigationBarItem(
           icon: Icon(Icons.airplane_ticket_outlined),
           label: 'Rewards',
         ),
-        BottomNavigationBarItem(
+        const BottomNavigationBarItem(
           icon: Icon(Icons.person_outline_sharp),
           label: 'Account',
         )
