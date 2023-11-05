@@ -10,9 +10,11 @@ class TileCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      visualDensity: const VisualDensity(vertical: -4),
       title: Text(
         title,
-        style: const TextStyle(fontSize: 14, color: textColor),
+        style: const TextStyle(
+            fontSize: 16, color: textColor, fontWeight: FontWeight.w600),
       ),
       leading: Icon(
         icon,

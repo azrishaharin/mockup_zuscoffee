@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      Provider.of<AppBarState>(context, listen: false).setShowAppBar(false);
+      Provider.of<AppBarState>(context, listen: false).setShowAppBar(false, "");
     });
   }
 
@@ -94,11 +94,13 @@ class _HomePageState extends State<HomePage> {
                         Text(
                           "CEO",
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 20),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                              color: textColor),
                         ),
                         Text(
                           "Latte",
-                          style: TextStyle(fontSize: 12),
+                          style: TextStyle(fontSize: 12, color: textColor),
                         )
                       ],
                     ),

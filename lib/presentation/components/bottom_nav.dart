@@ -20,8 +20,9 @@ class BottomNav extends StatelessWidget {
       onTap: (index) => onTabChange!(index),
       items: [
         BottomNavigationBarItem(
-          icon: Image.asset("assets/images/zus_logo.png", width: 30),
+          icon: Image.asset("assets/images/zus_logo_inactive.png", width: 30),
           label: 'Home',
+          activeIcon: Image.asset("assets/images/zus_logo.png", width: 30),
         ),
         const BottomNavigationBarItem(
           icon: Icon(Icons.coffee),

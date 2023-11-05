@@ -18,7 +18,8 @@ class _ProfilePageState extends State<ProfilePage> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      Provider.of<AppBarState>(context, listen: false).setShowAppBar(true);
+      Provider.of<AppBarState>(context, listen: false)
+          .setShowAppBar(true, "Profile");
     });
   }
 

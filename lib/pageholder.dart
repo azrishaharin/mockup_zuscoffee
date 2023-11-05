@@ -34,7 +34,11 @@ class _PageHolderState extends State<PageHolder> {
     return Consumer<AppBarState>(
       builder: (context, value, child) {
         return Scaffold(
-          appBar: value.showAppBar ? const ZUSAppBar() : null,
+          appBar: value.showAppBar
+              ? ZUSAppBar(
+                  title: value.showAppBar ? value.getTitle : "",
+                )
+              : null,
           backgroundColor: Colors.white,
           body: _pageList[context.watch<Routing>().currentIndex],
           bottomNavigationBar: BottomNav(
