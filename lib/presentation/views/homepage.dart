@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_mock_zuscoffee/core/constant.dart';
 import 'package:flutter_mock_zuscoffee/data/homepage_data.dart';

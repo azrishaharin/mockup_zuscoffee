@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mock_zuscoffee/core/constant.dart';
 import 'package:flutter_mock_zuscoffee/presentation/components/icon_text.dart';
 
 class MissionPage extends StatelessWidget {

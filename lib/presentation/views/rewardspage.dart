@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mock_zuscoffee/core/constant.dart';
 import 'package:flutter_mock_zuscoffee/presentation/provider/appbar_state.dart';
